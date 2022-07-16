@@ -1,4 +1,5 @@
 import 'package:curso_de_diseno/domain/cubit/user_cubit.dart';
+import 'package:curso_de_diseno/ui/services/scaffold_messenger_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -73,6 +74,9 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         user.login(name: _textFieldController.text);
+                        ScaffoldMessengerService.showSuccessfulLoginSnackBar(
+                          name: _textFieldController.text,
+                        );
                       }
                     },
                     style: ElevatedButton.styleFrom(
