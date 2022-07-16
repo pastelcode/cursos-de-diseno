@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../domain/cubit/user_cubit.dart';
 
 const double _height = kToolbarHeight + 30;
 
@@ -10,8 +13,10 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
+    final user = BlocProvider.of<UserCubit>(context);
+
     return AppBar(
-      title: Text(title),
+      title: Text('¡Hola ${user.state!.name}!'),
       toolbarHeight: _height,
     );
   }
