@@ -1,4 +1,5 @@
 import 'package:curso_de_diseno/data/repositories/shared_preferences_repository.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../entities/user.dart';
@@ -14,7 +15,6 @@ class UserCubit extends Cubit<UserState> {
       name: name,
     );
     emit(user);
-    return user;
   }
 
   void checkForLoggedInUser() {
