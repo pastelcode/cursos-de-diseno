@@ -1,11 +1,10 @@
 import 'package:curso_de_diseno/data/repositories/shared_preferences_repository.dart';
 import 'package:curso_de_diseno/domain/cubit/user_cubit.dart';
 import 'package:curso_de_diseno/ui/routes.dart';
+import 'package:curso_de_diseno/ui/services/scaffold_messenger_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:routemaster/routemaster.dart';
-
-import 'domain/entities/user.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -36,6 +35,7 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         return MaterialApp.router(
+          scaffoldMessengerKey: ScaffoldMessengerService.scaffoldKey,
           routerDelegate: RoutemasterDelegate(
             routesBuilder: (BuildContext context) {
               return user.isLoggedIn ? loggedInMap : loggedOutMap;
