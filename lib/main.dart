@@ -1,3 +1,4 @@
+import 'package:curso_de_diseno/data/repositories/courses_repository.dart';
 import 'package:curso_de_diseno/data/repositories/shared_preferences_repository.dart';
 import 'package:curso_de_diseno/domain/cubit/user_cubit.dart';
 import 'package:curso_de_diseno/ui/routes.dart';
@@ -9,6 +10,7 @@ import 'package:routemaster/routemaster.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPreferencesRepository.init();
+  await CoursesRepository.init();
   runApp(const MyAppStateProvider());
 }
 
