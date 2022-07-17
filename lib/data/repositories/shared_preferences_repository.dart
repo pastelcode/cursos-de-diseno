@@ -5,7 +5,6 @@ class SharedPreferencesRepository {
 
   static Future<void> init() async {
     _preferences = await SharedPreferences.getInstance();
-    _preferences.clear();
   }
 
   static String? getString({required String key}) {
