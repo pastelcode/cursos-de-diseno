@@ -1,5 +1,4 @@
 import 'package:curso_de_diseno/data/repositories/shared_preferences_repository.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../entities/user.dart';
@@ -8,6 +7,9 @@ typedef UserState = User?;
 
 class UserCubit extends Cubit<UserState> {
   UserCubit() : super(null);
+
+  bool get isLoggedIn => state is User ? true : false;
+  String? get name => state?.name;
 
   login({required String name}) {
     SharedPreferencesRepository.setString(key: 'user-name', value: name);
@@ -25,6 +27,4 @@ class UserCubit extends Cubit<UserState> {
       emit(null);
     }
   }
-
-  bool get isLoggedIn => state is User ? true : false;
 }

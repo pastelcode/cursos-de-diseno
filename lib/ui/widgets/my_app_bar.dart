@@ -16,7 +16,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     final user = BlocProvider.of<UserCubit>(context);
 
     return AppBar(
-      title: Text('¡Hola ${user.state!.name}!'),
+      title: Text('¡Hola ${user.name}!'),
       toolbarHeight: _height,
     );
   }
