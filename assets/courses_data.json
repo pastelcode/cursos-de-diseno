@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Primer módulo",
+    "description": "Descripción del primer módulo",
+    "courses": [
+      {
+        "title": "Primer video",
+        "youtubeLink": "https://youtube.com"
+      }
+    ]
+  }
+]
