@@ -1,11 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:boxicons/boxicons.dart';
 import 'package:curso_de_diseno/data/repositories/courses_repository.dart';
 import 'package:curso_de_diseno/domain/entities/course.dart';
-import 'package:curso_de_diseno/ui/services/scaffold_messenger_service.dart';
-import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import '../../../../domain/entities/module.dart';
+import 'package:curso_de_diseno/ui/services/url_launcher_service.dart';
+import 'package:curso_de_diseno/domain/entities/module.dart';
 
 class CoursesList extends StatefulWidget {
   const CoursesList({Key? key}) : super(key: key);
@@ -82,9 +80,8 @@ class _CoursesListState extends State<CoursesList> {
                       title: Text(course.title),
                       iconColor: Colors.red,
                       leading: const Icon(Boxicons.bxl_youtube),
-                      onTap: () async {
-                        _launchUrl(course.youtubeLink);
-                      },
+                      onTap: () async =>
+                          await UrlLauncherService.launch(course.youtubeLink),
                     ),
                   const SizedBox(
                     height: 15,
@@ -95,14 +92,5 @@ class _CoursesListState extends State<CoursesList> {
         ],
       ),
     );
-  }
-
-  Future<void> _launchUrl(String url) async {
-    final uri = Uri.parse(url);
-    try {
-      launchUrl(uri);
-    } catch (e) {
-      SnackBarService.showErrorOnLaunchingUrlSnackBar();
-    }
   }
 }
