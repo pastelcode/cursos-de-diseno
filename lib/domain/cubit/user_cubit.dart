@@ -11,12 +11,17 @@ class UserCubit extends Cubit<UserState> {
   bool get isLoggedIn => state is User ? true : false;
   String? get name => state?.name;
 
-  login({required String name}) {
+  void login({required String name}) {
     SharedPreferencesRepository.setString(key: 'user-name', value: name);
     final user = User(
       name: name,
     );
     emit(user);
+  }
+
+  void logout() {
+    SharedPreferencesRepository.clear(key: 'user-name');
+    emit(null);
   }
 
   void checkForLoggedInUser() {

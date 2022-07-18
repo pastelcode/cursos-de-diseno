@@ -18,6 +18,17 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text('¡Hola ${user.name}!'),
       toolbarHeight: _height,
+      actions: <Widget>[
+        IconButton(
+          onPressed: () {
+            user.logout();
+          },
+          icon: const Tooltip(
+            message: 'Salir de la sesión',
+            child: Icon(Icons.logout),
+          ),
+        ),
+      ],
     );
   }
 

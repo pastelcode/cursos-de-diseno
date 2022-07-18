@@ -15,4 +15,12 @@ class SharedPreferencesRepository {
   static setString({required String key, required String value}) {
     _preferences.setString(key, value);
   }
+
+  static clear({String? key}) {
+    if (key is String) {
+      _preferences.remove(key);
+      return;
+    }
+    _preferences.clear();
+  }
 }
