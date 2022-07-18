@@ -15,14 +15,24 @@ class CoursesList extends StatefulWidget {
 }
 
 class _CoursesListState extends State<CoursesList> {
-  final modules = CoursesRepository.modules;
+  final modules = CoursesRepository.modules
+      .asMap()
+      .map((int key, Module module) {
+        module.index = key + 1;
+        return MapEntry(key, module);
+      })
+      .values
+      .toList();
 
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: ExpansionPanelList(
         expansionCallback: (int panelIndex, bool isExpanded) {
-          setState(() => modules[panelIndex].isExpandedOnList = !isExpanded);
+          setState(() {
+            final module = modules[panelIndex];
+            module.isExpandedOnList = !isExpanded;
+          });
         },
         children: <ExpansionPanel>[
           for (Module module in modules)
@@ -30,8 +40,31 @@ class _CoursesListState extends State<CoursesList> {
               canTapOnHeader: true,
               isExpanded: module.isExpandedOnList,
               headerBuilder: (_, bool isExpanded) => ListTile(
+                leading: Container(
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Colors.blue,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      '${module.index}',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ),
+                horizontalTitleGap: 0,
                 title: Text(module.title),
-                subtitle: isExpanded ? null : Text(module.description),
+                subtitle: isExpanded
+                    ? null
+                    : Text(
+                        module.description,
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                      ),
               ),
               body: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,6 +72,7 @@ class _CoursesListState extends State<CoursesList> {
                   Padding(
                     padding: const EdgeInsets.only(
                       left: 16.0,
+                      right: 16.0,
                       bottom: 10.0,
                     ),
                     child: Text(module.description),
@@ -52,6 +86,9 @@ class _CoursesListState extends State<CoursesList> {
                         _launchUrl(course.youtubeLink);
                       },
                     ),
+                  const SizedBox(
+                    height: 15,
+                  ),
                 ],
               ),
             )
