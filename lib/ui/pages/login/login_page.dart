@@ -74,7 +74,7 @@ class _LoginPageState extends State<LoginPage> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         user.login(name: _textFieldController.text);
-                        ScaffoldMessengerService.showSuccessfulLoginSnackBar(
+                        SnackBarService.showSuccessfulLoginSnackBar(
                           name: _textFieldController.text,
                         );
                       }
