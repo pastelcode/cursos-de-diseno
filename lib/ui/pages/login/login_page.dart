@@ -34,11 +34,7 @@ class _LoginPageState extends State<LoginPage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            'Cursos de diseño',
-            style: Theme.of(context).textTheme.displayMedium,
-            textAlign: TextAlign.center,
-          ),
+          Image.asset('assets/logo.jpeg'),
           const SizedBox(
             height: 55,
           ),
