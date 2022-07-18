@@ -6,12 +6,14 @@ class Module {
     required this.description,
     required this.courses,
     this.isExpandedOnList = false,
+    this.index = 0,
   });
 
   final String title;
   final String description;
   final List<Course> courses;
   bool isExpandedOnList;
+  int index;
 
   factory Module.fromJson(Map<String, dynamic> json) => Module(
         title: json["title"],
