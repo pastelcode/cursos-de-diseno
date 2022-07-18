@@ -1,11 +1,95 @@
 [
   {
-    "title": "Primer módulo",
-    "description": "Descripción del primer módulo",
+    "title": "Introducción al diseño gráfico",
+    "description": "Conoce qué hace un profesional del diseño gráfico, los fundamentos y las herramientas de esta hermosa profesión",
     "courses": [
       {
-        "title": "Primer video",
-        "youtubeLink": "https://youtube.com"
+        "title": "¿Qué hace un profesional del diseño gráfico?",
+        "youtubeLink": "https://www.youtube.com/watch?v=FV5LEk4riNY&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=1"
+      },
+      {
+        "title": "7 elementos visuales del diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=ivdNulDcKBc&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=2"
+      },
+      {
+        "title": "6 principios del diseño gráfico que debes conocer",
+        "youtubeLink": "https://www.youtube.com/watch?v=4fUbj8DzT6Q&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=3"
+      },
+      {
+        "title": "Teoría de la Gestalt aplicada al diseño gráfico (o psicología de la Gestalt)",
+        "youtubeLink": "https://www.youtube.com/watch?v=UnenlTAGuFg&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=4"
+      }
+    ]
+  },
+  {
+    "title": "Teoría básica",
+    "description": "Como todo en la vida, el diseño gráfico se compone de ciertos conceptos sumamente importantes en la práctica, ¡apréndelos aquí!",
+    "courses": [
+      {
+        "title": "Tipografías: qué son, los diferentes tipos y sus variables tipográficas",
+        "youtubeLink": "https://www.youtube.com/watch?v=Z37lEQMfPtg&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=5"
+      },
+      {
+        "title": "Proporción áurea y cómo se aplica en diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=gNmjsCqCfwY&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=6"
+      },
+      {
+        "title": "Teoría del color en el diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=7Sc-WkcQKj4&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=7"
+      },
+      {
+        "title": "RGB & CMYK: los modos de color o formatos de color",
+        "youtubeLink": "https://www.youtube.com/watch?v=WNRTBrXvw6s&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=8"
+      },
+      {
+        "title": "Mapas de bits e imágenes vectoriales: conoce bien las diferencias",
+        "youtubeLink": "https://www.youtube.com/watch?v=9i_0cLdJE-s&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=9"
+      }
+    ]
+  },
+  {
+    "title": "Herramientas",
+    "description": "Conoce a profundidad las herramientas y programas que te harán gozar la vida",
+    "courses": [
+      {
+        "title": "¿Qué programas del diseño gráfico necesitamos dominar?",
+        "youtubeLink": "https://www.youtube.com/watch?v=-QOzfJSngCU&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=10"
+      },
+      {
+        "title": "Paleta de colores: cómo crear una y qué tener en cuenta",
+        "youtubeLink": "https://www.youtube.com/watch?v=QWuh5SkHT-A&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=16"
+      }
+    ]
+  },
+  {
+    "title": "La psicología en el diseño gráfico",
+    "description": "El diseño gráfico tiene como objetivo hacer sentir lo que se desea comunicar a la mayoría del público, conoce las simples y sofisticadas técnicas para lograrlo",
+    "courses": [
+      {
+        "title": "Psicología del color en el diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=-kP-p_42SoA&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=11"
+      },
+      {
+        "title": "Psicología de la forma en el diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=IvMtbJ6GFOE&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=12"
+      }
+    ]
+  },
+  {
+    "title": "Conceptos extras",
+    "description": "Echa a volar tu curiosidad y experimenta con nuevos conceptos e ideas",
+    "courses": [
+      {
+        "title": "Kerning y Tracking: qué son y en qué se diferencian en diseño gráfico",
+        "youtubeLink": "https://www.youtube.com/watch?v=fzFO4iSGwK0&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=13"
+      },
+      {
+        "title": "Formatos de imagen para mapas de bits: JPG, GIF, PNG y TIFF",
+        "youtubeLink": "https://www.youtube.com/watch?v=TMQeaHiK5qE&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=14"
+      },
+      {
+        "title": "Tipografías monoespaciadas: el orden sobre todos los caracteres",
+        "youtubeLink": "https://www.youtube.com/watch?v=VazU7Owqf_U&list=PLjrXqm46I4pPgzUlnemhxWatJZzG9WFTB&index=15"
       }
     ]
   }
