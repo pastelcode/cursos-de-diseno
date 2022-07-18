@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
     return BlocBuilder<UserCubit, UserState>(
       builder: (context, state) {
         return MaterialApp.router(
-          scaffoldMessengerKey: ScaffoldMessengerService.scaffoldKey,
+          scaffoldMessengerKey: SnackBarService.scaffoldKey,
           routerDelegate: RoutemasterDelegate(
             routesBuilder: (BuildContext context) {
               return user.isLoggedIn ? loggedInMap : loggedOutMap;
